@@ -20,6 +20,39 @@
 #include <SPI.h>
 #include <Ethernet.h>
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bewässerungsstation</title>
+</head>
+<body>
+    <h1>Bewässerungs-Daten</h1>
+
+    <div>
+        <li>input 1</li>
+        <client class="println"></client>
+        <li>input 2</li>
+        <li>input 3</li>
+        <li>input 4</li>
+        <input type="date">
+
+    </div>
+
+    <script>
+        let datum = new Date();
+        document.p.innerHTML = "    <h1>Bewässerungs Station</h1><p>Hier findest du die Daten der Bewässerungsstation</p>   <p>Temparatur: </p><p>Luftfeuchtigkeit:  </p><p>Wasserstand:</p><p> Today's date is " + datum + "<h1>"
+    </script>
+    
+    
+ 
+    
+</body>
+</html>
+
 // Enter a MAC address and IP address for your controller below.
 // The IP address will be dependent on your local network:
 byte mac[] = {
@@ -93,7 +126,7 @@ void loop() {
           client.println("<!DOCTYPE HTML>");
           client.println("<html>");
           client.println("<title>A A A</title>")
-          
+
           // output the value of each analog input pin
           for (int analogChannel = 0; analogChannel < 6; analogChannel++) {
             int sensorReading = analogRead(analogChannel);
