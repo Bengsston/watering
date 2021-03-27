@@ -4,20 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="C:\Users\marti\Desktop\Arduino_Projekt\css\style.css">>
+    <link rel="stylesheet" href="C:\Users\marti\Desktop\Arduino_Projekt\css\style.css">
+    <link rel="stylesheet" href="C:\Users\marti\Desktop\Arduino_Projekt\images">
     <title>Bewässerungsstation</title>
+
+    <script type="text/javascript">
+        function updateTime() {
+            var date = new Date();
+            var stunden = date.getHours();
+            var minuten = date.getMinutes();
+            var tag = date.getDate();
+            var monatDesJahres = date.getMonth();
+            var jahr = date.getFullYear();
+            var tagInWoche = date.getDay();
+            var wochentag = new Array("Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag");
+            var monat = new Array("Januar", "Februar", "M&auml;rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember");
+            var datum = wochentag[tagInWoche] + ", " + tag + ". " + monat[monatDesJahres] + " " + jahr + " " + stunden + ":" + minuten;
+            document.getElementById('time').innerHTML = datum;
+            setTimeout(updateTime, 60000);
+        }
+        window.addEventListener("load", updateTime);
+    </script>
+
 </head>
-<body>
+
+<body onload="text/javascript">
+    <div id="time"></div>
+    <div id="image">
+        <img src="images/mitchell-orr-YSjtPzUV64s-unsplash.jpg" alt="mitchel bild">
+    </div>
     <h1>Bewässerungs-Daten</h1>
 
-    <div>
+    <div id="inputs">
         <li>input 1: </li>
         <li>input 2: </li>
         <li>input 3: </li>
         <li>input 4: </li>
+        <input type="time">
         <input type="date">
 
     </div>
+
+    </script>
 
     <script>
         let datum = new Date();

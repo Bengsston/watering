@@ -1,12 +1,22 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 1%;
+    padding: 1%;
 }
 
 body{
+    margin: 0;
+    padding: 0;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.inputs{
-    font-size: 50;
+.inputs {
+  width: 15em;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  padding: 8px 12px;
+}
+
+#image img{
+    width: 100%;
+    margin-top: 0px;
 }
